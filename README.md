@@ -9,7 +9,7 @@ Docker CA helps create X.509 certificates for testing. On the first run, Docker 
 ### Usage
 Docker CA uses a bind mount to persist certificate data between invocations.
 You may copy the resulting certificates out of the container by referencing the
-CA folder on the host system, or via `docker cp`. The server and client certificates will be located at `/root/ca/intermediate/<private | certs>/CERT_NAME.<key | cert>.pem
+CA folder on the host system, or via `docker cp`. The server and client certificates will be located at `/root/ca/intermediate/<private | certs>/CERT_NAME.<key | cert>.pem`
 
 Invocation: `docker run -v [--env UNSAFE_CA='true'] /host/path/to/ca/folder:/root/ca:rw docker-ca <client | server> [CERT_NAME] [DNS_NAME]`
 
